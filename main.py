@@ -43,7 +43,7 @@ if __name__ == "__main__":
     tiedosto = "kappaleet.txt"  # Tiedosto, josta kappaleet luetaan
     lahettaja = os.getenv("GMAIL_KAYTTAJATUNNUS")  # Ympäristömuuttuja Gmail-osoitteelle
     salasana = os.getenv("GMAIL_SOVELLUSKOHTAINEN_SALASANA")  # Ympäristömuuttuja sovelluskohtaiselle salasanalle
-    vastaanottaja = "vastaanottaja@gmail.com"  # Vastaanottajan sähköposti
+    vastaanottaja = os.getenv("GMAIL_VASTAANOTTAJA")  # Vastaanottajan sähköposti
 
     # Tarkistetaan, että ympäristömuuttujat on määritetty
     if not lahettaja or not salasana:
